@@ -1,0 +1,143 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Barra de navegación */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Sección de inicio (hero) */
+.hero {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/* Sección Traductor */
+.translator-section {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.translator-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fafafa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.translator-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Secciones adicionales */
+.about-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.about-section h2, .contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .translator-container {
+        padding: 20px;
+    }
+}

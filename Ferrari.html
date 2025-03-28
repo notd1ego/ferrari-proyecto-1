@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///C:/Users/Diego/Documents/proyecto%20pagina%20diego/.htlm/.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./Ferrari_files/styles.css">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de fan de Ferrari y F1 creada por Diego Arouxet. Noticias, videos y más sobre Ferrari en la F1.">
+  <title>Ferrari
+  </title>
+
+  <!-- Fuentes Elegantes -->
+  <link href="./Ferrari_files/css2" rel="stylesheet">
+
+  <style>
+    /* Estilos globales */
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Estilo del encabezado */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      background-color: rgba(0, 0, 0, 0.103);
+      padding: 5px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    header img {
+      width: 80px;
+      filter: brightness(1) invert(0);
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: rotate(10deg);
+    }
+
+    nav a {
+      margin-left: 40px;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 3px;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #e60000;
+      transform: scale(1.1);
+    }
+
+    .logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: #e60000;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: center;
+      height: 100vh;
+      background-image: url('https://motorcyclesports.net/wp-content/uploads/2025/02/2025022025-Ferrari-drivers.webp'); 
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+      animation: heroEffect 10s infinite alternate;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.6rem;
+      color: #e60000;
+      text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+      margin-top: 20px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    /* Secciones con anclajes */
+    section {
+      padding: 80px 20px;
+      max-width: 1920px;
+      margin: 5 auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Noticias */
+    .noticias {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
+      z-index: 2;
+    }
+
+    .noticia {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .noticia:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .noticia img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .noticia:hover img {
+      transform: scale(1.05);
+    }
+
+    .noticia h3 {
+      font-size: 1.8rem;
+      color: #e60000;
+      margin: 20px;
+      font-weight: 600;
+    }
+
+    .noticia p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin: 0 20px 20px;
+    }
+
+    .noticia a {
+      display: block;
+      background-color: #e60000;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 12px 0;
+      text-align: center;
+      margin: 0 20px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .noticia a:hover {
+      background-color: #d30000;
+    }
+
+    /* Videos */
+    .videos iframe {
+      margin: 0 20px;
+      border: 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .videos iframe:hover {
+      transform: scale(1.05);
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #111;
+      padding: 40px 20px;
+      text-align: center;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #e60000;
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes logoAnimation {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes heroEffect {
+      0% {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      50% {
+        background-color: rgba(83, 2, 2, 0.5); /* Amarillo Ferrari */
+      }
+      100% {
+        background-color: rgba(255, 0, 0, 0.5); /* Rojo Ferrari */
+      }
+    }
+
+    /* Logos de Ferrari en la pantalla */
+    .logo-ferrari {
+      position: center;
+      top: 50px;
+      right: 90px;
+      width: 120px;
+      animation: logoAnimation 2s ease-in-out;
+    }
+
+    /* Agregando más logos de Ferrari */
+    .logo-ferrari-small {
+      position: fixed;
+      top: 40px;
+      left: 40px;
+      width: 0px;
+      z-index: 5;
+      animation: logoAnimation 5s ease-in-out infinite alternate;
+    }
+
+    .logo-ferrari-bottom {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      width: 100px;
+      animation: logoAnimation 5s ease-in-out infinite alternate;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+  
+    <img src="./Ferrari_files/Ferrari-Logo.png" alt="Logo Ferrari" class="logo-ferrari">
+    <div class="logo-text"> Ferrari F1
+
+    </div>
+    <nav>
+      <a href="file:///C:/Users/Diego/Documents/proyecto%20pagina%20diego/.htlm/.html#noticias">Noticias</a>
+      <a href="file:///C:/Users/Diego/Documents/proyecto%20pagina%20diego/.htlm/.html#videos">Videos</a>
+      <a href="file:///C:/Users/Diego/Documents/proyecto%20pagina%20diego/.htlm/.html#historia">Historia de Ferrari</a>
+      <a href="file:///C:/Users/Diego/Documents/proyecto%20pagina%20diego/.htlm/.html#estadisticas">Estadísticas F1</a>
+      <a href="file:///C:/Users/Diego/Documents/proyecto%20pagina%20diego/.htlm/.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Logo adicional en la parte superior izquierda -->
+  <img src="./Ferrari_files/ferrari_logo_icon_248563.png" alt="Logo Ferrari" class="logo-ferrari-small">
+
+  <!-- Logo adicional en la parte inferior derecha -->
+  <img src="./Ferrari_files/ferrari_logo_icon_248563.png" alt="Logo Ferrari" class="logo-ferrari-bottom">
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Bienvenido a mi Proyecto</h1>
+    <p>  Creada por Diego Arouxet | Descubre todo sobre Ferrari en la Fórmula 1</p>
+  </div>
+
+  <!-- Noticias -->
+  <section id="noticias" class="noticias">
+    <h2>Últimas Noticias</h2>
+    <div class="noticia">
+      <h3>Ferrari SF90: El coche más avanzado de F1</h3>
+      <p>Conoce todas las innovaciones tecnológicas que hacen de este coche un rival formidable...</p>
+      <a href="https://www.ferrari.com/en-EN/formula1" target="_blank">Leer más</a>
+    </div>
+    <div class="noticia">
+      <h3>Charles Leclerc: El futuro de Ferrari</h3>
+      <p>Repasamos la carrera de Charles Leclerc y sus logros como piloto de Ferrari...</p>
+      <a href="https://www.ferrari.com/en-EN/formula1/drivers/charles-leclerc" target="_blank">Leer más</a>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section id="videos" class="videos">
+    <h2>Videos Exclusivos de Ferrari</h2>
+    <div style="display: flex; justify-content: center; gap: 30px;">
+      <iframe width="560" height="315" src="./Ferrari_files/2J0e7Mw1WmI.html" title="Ferrari F1 Team 2020 - Official Video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+      <iframe width="560" height="315" src="./Ferrari_files/1S8ph4dItW8.html" title="Ferrari F1 Car Launch 2021" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </div>
+  </section>
+
+  <!-- Historia de Ferrari -->
+  <section id="historia">
+    <h2>Historia de Ferrari</h2>
+    <img src="./Ferrari_files/C_Leclerc.png" alt="Logo Ferrari" class="logo-ferrari">
+    <p>La Scuderia Ferrari es la escudería más antigua y exitosa de la Fórmula 1. Fundada en 1929...</p>
+    <a href="https://www.ferrari.com/en-EN/formula1/scuderia-ferrari" target="_blank">Leer más</a>
+  </section>
+
+  <!-- Estadísticas F1 -->
+  <section id="estadisticas">
+    <h2>Estadísticas F1</h2>
+    <img src="./Ferrari_files/AF_FEED_IG_REDBULL_-_2023-10-10T221525.428.png" alt="Logo Ferrari" class="logo-ferrari">
+    <p>Ferrari ha logrado numerosos campeonatos de pilotos y constructores, destacándose por su legado...</p>
+    <a href="https://www.formula1.com/en/results.html" target="_blank">Ver Estadísticas</a>
+  </section>
+
+  <!-- Pie de página -->
+  <footer id="contacto">
+    <p>© 2025 Diego Arouxet | Ferrari Fan Page - Todos los derechos reservados</p>
+    <a href="file:///C:/Users/Diego/Documents/proyecto%20pagina%20diego/.htlm/.html#">Términos y Condiciones</a> | <a href="file:///C:/Users/Diego/Documents/proyecto%20pagina%20diego/.htlm/.html#">Política de Privacidad</a><!-- Auto en movimiento -->
+    <div class="auto-en-movimiento">
+        <img src="./Ferrari_files/2023-cars-FERRARI-CAR.png" alt="Auto en Movimiento">
+      </div>
+  </footer>
+
+
+
+</body></html>
